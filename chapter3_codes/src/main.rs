@@ -35,4 +35,24 @@ fn main() {
 
     print!("checking difference between println and print..."); // doesn't add newline at the end
     print!("\n");
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    println!("the tuple is: {:?}", tup); // prints the tuple (500, 6.4, 1)
+    let tup = (500, 6.4, 1);
+    println!("tuple without manually defining the datatypes: {:?}", tup); // prints the same thing
+
+    let five_hundred = tup.0;
+    let sixpointfour = tup.1;
+    let one = tup.2;
+    println!("elements of tuple accessed using '.' are: {five_hundred}, {sixpointfour}, {one}");
+
+    let a = [1, 3, 2, 4, 5];
+    println!("the array is: {:?}", a); // prints [1, 3, 2, 4, 5]
+    let a = [3; 5];
+    println!("the array is: {:?}", a); // prints [3, 3, 3, 3, 3]
+    let first = a[0]; let second = a[1];
+    println!("elements of array accessed using arr[index] are: {first}, {second}");
+
+    
+
 }
