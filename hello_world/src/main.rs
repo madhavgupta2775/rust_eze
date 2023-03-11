@@ -1,3 +1,10 @@
+use std::io;
+use rand::Rng;
+use std::io::{Write}
+
+
 fn main() {
-    println!("Hello, world!");
+    println!("what is your name?");
+    let mut name: String::new;
+    println!("Hello, ");
 }
