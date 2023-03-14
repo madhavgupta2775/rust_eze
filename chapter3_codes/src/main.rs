@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     let mut x = 5;
     println!("the value of x is: {x}");
@@ -52,6 +54,22 @@ fn main() {
     println!("the array is: {:?}", a); // prints [3, 3, 3, 3, 3]
     let first = a[0]; let second = a[1];
     println!("elements of array accessed using arr[index] are: {first}, {second}");
+
+    let a = [1, 2, 3, 4, 5];
+    println!("please enter the array index: ");
+    let mut index  = String::new();
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+
+    let index: usize = index    
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+
+    let element = a[index];
+
+    println!("the value of the element at index {index} is: {element}");
 
     
 
