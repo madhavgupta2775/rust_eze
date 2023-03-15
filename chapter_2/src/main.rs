@@ -35,6 +35,35 @@ fn main() {
     //             -- snip for taking input in guess and generating secret_number --     
     //      -- snip for matching guess with secret_number --
     // }
-    
 
+    loop {
+        println!("\n\nGuess the number!\n");
+
+        let secret_number = rand::thread_rng().gen_range(1..=100);
+
+        println!("Please input your guess: ");
+
+        let mut guess = String::new();
+
+        io::stdin()
+            .read_line( &mut guess)
+            .expect("Unable to read line");
+
+        let guess: i64 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        println!("You guessed: {guess}");
+
+        match guess.cmp(&secret_number){
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too large!"),
+            Ordering::Equal => {
+                println!("You win!!");
+                break;
+            }
+        }
+    }
+    
 }
