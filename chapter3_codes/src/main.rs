@@ -1,3 +1,5 @@
+pub mod functions; // includes the functions module
+
 use std::io;
 
 fn main() {
@@ -71,6 +73,6 @@ fn main() {
 
     println!("the value of the element at index {index} is: {element}");
 
-    
+    functions::lmao(); // calls lmao function from the functions module
 
 }
