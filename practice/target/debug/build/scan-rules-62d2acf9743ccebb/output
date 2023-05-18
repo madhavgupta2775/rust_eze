@@ -1,5 +1,0 @@
-cargo:rerun-if-changed=build.rs
-cargo:rustc-cfg=std_net_scanners
-cargo:rustc-cfg=binary_heap_impls_debug
-cargo:rustc-cfg=f64_debug_is_roundtrip_accurate
-cargo:rustc-cfg=socket_addr_vx_scanners
